@@ -1,11 +1,24 @@
 .registration {
-  // outline: auto;
-  padding: 32px 0 32px 0;
+  margin-left: auto;
+  margin-right: auto;
 
-  background: #fffff9;
-  box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
-  border-radius: 150px 150px 0px 0px;
-  //   transform: rotate(90deg);
+  @media screen and (min-width: 320px) {
+    width: 280px;
+    padding: 32px 21px 32px 23px;
+
+    background: #fffff9;
+    box-shadow: -4px -4px 4px rgba(171, 129, 108, 0.15), 4px 4px 4px rgba(171, 129, 108, 0.15);
+    border-radius: 150px 150px 0px 0px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 704px;
+
+    border-radius: 150px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+  }
 }
 
 .registration-common {
@@ -45,7 +58,7 @@
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 16px;
-  line-height: calc(20 /16);
+  line-height: calc(20 / 16);
 
   color: #2e2520;
 }
@@ -60,9 +73,12 @@
 .registration-form__label {
 }
 .registration-form__input {
+  display: block;
+  width: 100%;
   outline: none;
   border: none;
   border-bottom: 1px solid #ab816c;
+
   &:focus-within {
     border-right: 1px solid #ab816c;
     border-top: 1px solid #ab816c;
